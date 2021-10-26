@@ -88,8 +88,8 @@ pip install ansible selinux setools
 ### Create a directory for the ChRIS_ultron_backEnd repository and clone it
 
 ```bash
-install -d -o $USER /usr/local/src/ChRIS_ultron_backEnd
-git clone git@github.com:team19hackathon2021/ChRIS_ultron_backEnd.git /usr/local/src/ChRIS_ultron_backEnd
+install -d -o $USER ~/.local/src/ChRIS_ultron_backEnd
+git clone git@github.com:team19hackathon2021/ChRIS_ultron_backEnd.git ~/.local/src/ChRIS_ultron_backEnd
 ```
 
 ## Determine the IP Address of your computer that will run the Podman TCP API
@@ -107,8 +107,8 @@ Use the IP address you want to use (example: 192.168.1.13) for the PODMAN_IP_ADD
 ## Run the Ansible automation to install the ChRIS system
 
 ```bash
-cd /usr/local/src/ChRIS_ultron_backEnd
-ansible-playbook -K /usr/local/src/ChRIS_ultron_backEnd/ansible/install_all.yml -e PODMAN_IP_ADDRESS=192.168.1.13
+cd ~/.local/src/ChRIS_ultron_backEnd
+ansible-playbook -K ~/.local/src/ChRIS_ultron_backEnd/ansible/install_all.yml -e PODMAN_IP_ADDRESS=192.168.1.13
 ```
 
 # Troubleshooting
